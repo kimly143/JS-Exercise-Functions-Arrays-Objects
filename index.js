@@ -298,7 +298,7 @@ function getGermanCars(inventory) {
 */
 const sum = (a,b) => {return (a + b)};
 const addFive = (num) => {return (num+5)};
-const argTimesTwo = (num) => {returm (num*2)};
+const argTimesTwo = (num) => {return (num*2)};
 
 /**
  * ### Challenge `carMaker`
@@ -313,8 +313,15 @@ const argTimesTwo = (num) => {returm (num*2)};
  *         (1) causes the odometer in the object to be increased by the distance,
  *         (2) returns the updated value of the `odometer`.
 */
-function carMaker(/* code here */) {
-  /* code here */
+function carMaker(number) {
+  let odometer = number;
+  let updateOdometer = null;
+  return {odometer: number,
+  drive: (distance) => {
+    updateOdometer = odometer + distance;
+    return updateOdometer;
+  }
+}
 }
 
 /// ////// END OF CHALLENGE /////////
