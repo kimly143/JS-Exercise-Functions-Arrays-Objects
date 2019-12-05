@@ -66,7 +66,7 @@ console.log(makePersonObject(5,"Leia","Leia@SpeechGrammarList.com"));
 */
 function getName(object) {
   const name= object.name;
-  console.log("Hello, my name is "+ name);
+  return `Hello, my name is ${name}`;
 };
 getName({id: 1, name:"Leia", email: "Leia@gmail.com"});
 /**
@@ -87,7 +87,7 @@ function makeSmartPerson(name) {
     return num1+num2;
   }
   function speak(){
-    return console.log("Hello, my name is " + name);
+    return `Hello, my name is ${name}`;
   }
   return {name,
     sum: sum, //same key and value can be omit like next line speak: speak or name: name above
@@ -296,9 +296,9 @@ function getGermanCars(inventory) {
  *   return num * 2
  * }
 */
-const sum = null;  sum(a,b) => a + b;
-const addFive = null; // code here!
-const argTimesTwo = null; // code here!
+const sum = (a,b) => {return (a + b)};
+const addFive = (num) => {return (num+5)};
+const argTimesTwo = (num) => {returm (num*2)};
 
 /**
  * ### Challenge `carMaker`
